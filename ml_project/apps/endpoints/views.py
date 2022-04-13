@@ -2,14 +2,8 @@ from django.db import transaction
 from rest_framework import viewsets
 from rest_framework import mixins
 from rest_framework.exceptions import APIException
-from .models import Endpoint
-from .serializers import EndpointSerializer
-from .models import MLAlgorithm
-from .serializers import MLAlgorithmSerializer
-from .models import MLAlgorithmStatus
-from .serializers import MLAlgorithmStatusSerializer
-from .models import MLRequest
-from .serializers import MLRequestSerializer
+from .models import Endpoint, MLAlgorithm, MLAlgorithmStatus, MLRequest
+from .serializers import EndpointSerializer, MLAlgorithmSerializer, MLAlgorithmStatusSerializer, MLRequestSerializer
 
 
 class EndpointViewSet(mixins.RetrieveModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):

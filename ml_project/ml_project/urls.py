@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from endpoints.urls import urlpatterns as endpoints_urlpatterns
+from apps.endpoints.urls import urlpatterns as endpoints_urlpatterns
 
 
 urlpatterns = [
