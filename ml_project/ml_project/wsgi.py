@@ -18,8 +18,7 @@ from apps.ml.registry import MLRegistry
 from apps.ml.income_classifier.random_forest import RandomForestClassifier
 
 try:
-    registry = MLRegistry() # create ML registry
-    # Random Forest classifier
+    registry = MLRegistry()
     rf = RandomForestClassifier()
     # add to ML registry
     registry.add_algorithm(endpoint_name="income_classifier",

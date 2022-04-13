@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import re_path, include
 from rest_framework.routers import DefaultRouter
 from . import views
 
@@ -11,5 +11,6 @@ router.register("mlrequests", views.MLRequestViewSet, basename="mlrequests")
 
 
 urlpatterns = [
-    path("api/v1/", include(router.urls)),
+    re_path(r"^api/v1/", include(router.urls)),
+    re_path(r"^api/v1/(?P<endpoint_name>.+)/predict$", views.PredictView.as_view(), name="predict"),
 ]
